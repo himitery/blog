@@ -1,5 +1,7 @@
 # Sveltekit Blog
 
+<img width="1487" alt="image" src="https://user-images.githubusercontent.com/65934968/211406809-b2e8569b-6224-4255-8a63-d1808b75d439.png">
+
 ## 1. 소개
 
 `Sveltekit`을 사용하여 제작한 블로그입니다!
