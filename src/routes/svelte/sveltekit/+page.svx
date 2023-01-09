@@ -1,0 +1,9 @@
+---
+title: sveltekit
+---
+
+```json
+{
+    "route": "/svelte/sveltekit"
+}
+```

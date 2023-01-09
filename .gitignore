@@ -1,0 +1,30 @@
+.output
+
+
+### Environment ###
+.DS_Store
+.env
+.env.*
+!.env.example
+
+### Node ###
+node_modules
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+### Svelte ###
+/build
+/.svelte-kit
+/package
+.vercel
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+### IDE ###
+.idea
+.vscode

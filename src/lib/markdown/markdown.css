@@ -1,0 +1,8 @@
+code:not(pre > code) {
+    border-radius: 0.2rem;
+    background-color: rgba(238, 132, 50, 0.25);
+}
+
+hr {
+    margin: 12px 0 !important;
+}
