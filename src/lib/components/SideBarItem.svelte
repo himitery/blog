@@ -36,15 +36,18 @@
 
   <section
     class={classNames(
-      'ml-2 flex flex-row items-center',
+      'ml-2 flex flex-col items-center pl-2',
       'overflow-y-hidden transition-all ease-in-out',
-      open ? 'max-h-screen duration-700' : 'max-h-0 opacity-10 duration-300',
-      'ltr:ml-1 ltr:pl-4 ltr:before:left-0 rtl:mr-1 rtl:pr-4 rtl:before:right-0',
-      'before:absoulte before:inset-y-1.5 before:h-[calc(100%-16px)] before:w-px before:bg-gray-200 dark:before:bg-neutral-800'
+      open ? 'max-h-screen duration-700' : 'max-h-0 opacity-10 duration-300'
     )}
   >
     {#if Object.keys(item.children).length > 0}
-      <ul class="flex h-full w-full flex-col pl-[8px]">
+      <ul
+        class={classNames(
+          'relative flex h-full w-full flex-col pl-[8px]',
+          'before:absolute before:inset-y-1.5 before:left-0 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800'
+        )}
+      >
         {#each Object.entries(item.children) as [key, value]}
           <svelte:self path={key} item={value} prefix={`${prefix}/${path}`} />
         {/each}
