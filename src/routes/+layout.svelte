@@ -4,6 +4,7 @@
   import 'prism-themes/themes/prism-one-dark.css';
 
   import classNames from 'classnames';
+  import { parse } from 'cookie';
   import { onMount } from 'svelte';
   import type { PageData } from './$types';
 
@@ -15,7 +16,9 @@
   export let data: PageData;
 
   onMount(() => {
-    themeStore.set(data.theme === 'dark' ? 'dark' : 'light');
+    themeStore.set(
+      parse(document.cookie)['theme'] === 'dark' ? 'dark' : 'light'
+    );
   });
 </script>
 
