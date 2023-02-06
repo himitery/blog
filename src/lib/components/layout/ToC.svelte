@@ -58,11 +58,12 @@
 <aside
   class={classNames(
     'w-[16rem] min-w-0 max-w-0 opacity-0 lg:min-w-[16rem] lg:max-w-[16rem] lg:opacity-100',
-    'transition-all duration-500 ease-in-out lg:duration-1000',
-    'overflow-hidden'
+    'transition-all duration-500 ease-in-out lg:duration-1000'
   )}
 >
-  <ul class="sticky top-[4rem] flex h-[calc(100vh-4rem)] w-full flex-col py-16">
+  <div
+    class="sticky top-[4rem] h-[calc(100vh-4rem)] w-full flex-1 flex-col overflow-x-hidden py-16"
+  >
     {#if contents !== undefined}
       {#each contents as content, index}
         <li
@@ -88,5 +89,5 @@
         </li>
       {/each}
     {/if}
-  </ul>
+  </div>
 </aside>

@@ -14,12 +14,12 @@
 
 <aside
   class={classNames(
-    'min-w-screen fixed z-[10] flex w-screen bg-white dark:bg-black md:relative md:flex md:w-[16rem] md:min-w-[16rem]',
+    'min-w-screen fixed z-[10] flex w-screen bg-white dark:bg-black md:relative md:w-[16rem] md:min-w-[16rem]',
     'transition-transform duration-500 ease-in-out',
     $menuVisibleStore ? 'translate-y-0' : '-translate-y-full md:translate-y-0'
   )}
 >
-  <div class="sticky top-[4rem] flex h-[calc(100vh-4rem)] flex-1 flex-col">
+  <div class="sticky top-[4rem] h-[calc(100vh-4rem)] flex-1 flex-col">
     <section
       class={classNames(
         'p-16',
