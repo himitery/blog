@@ -3,6 +3,7 @@
   import { page } from '$app/stores';
   import classNames from 'classnames';
   import type { PathData } from '../model/path-structure';
+  import { menuVisibleStore } from '../stores/menu.store';
   import Button from './form/Button.svelte';
 
   export let prefix: string = '';
@@ -15,8 +16,10 @@
   let open: boolean = true;
 
   const handleRoute = () => {
-    if (item.page) goto(`${prefix}/${path}`);
-    else open = !open;
+    if (item.page) {
+      menuVisibleStore.update(() => false);
+      goto(`${prefix}/${path}`);
+    } else open = !open;
   };
 
   const handleOpen = () => {

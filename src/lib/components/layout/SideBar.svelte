@@ -30,7 +30,10 @@
       <Button
         label="Home"
         selected={$page.url.pathname === '/'}
-        click={() => goto('/')}
+        click={() => {
+          menuVisibleStore.update(() => false);
+          goto('/');
+        }}
       />
     </section>
 
